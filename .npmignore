@@ -1,7 +1,13 @@
-.gitignore
 
 /test
 /demo
 /example
+/public
+/src
 
+vue.config.js
 package-lock.json
+babel.config.js
+.eslintrc.js
+.browserslistrc
+.gitignore

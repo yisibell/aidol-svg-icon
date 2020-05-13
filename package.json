@@ -1,29 +1,47 @@
 {
   "name": "@aidol/svg-icon",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "main": "dist/aidol-svg-icon.umd.min.js",
   "description": "a svg icon component for vue",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yisibell/aidol-svg-icon.git"
-  },
-  "keywords": [
-    "svg-icon",
-    "aidol",
-    "svg",
-    "vue",
-    "component"
-  ],
   "author": {
     "email": "yisiwings@163.com",
     "name": "elenh"
   },
-  "license": "MIT",
+  "keywords": [
+    "vue",
+    "svg",
+    "icon",
+    "component",
+    "aidol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yisibell/aidol-svg-icon.git"
+  },
+  "homepage": "https://github.com/yisibell/aidol-svg-icon",
   "bugs": {
     "url": "https://github.com/yisibell/aidol-svg-icon/issues"
   },
-  "homepage": "https://github.com/yisibell/aidol-svg-icon#readme"
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name aidol-svg-icon src/SvgIcon/index.vue",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "core-js": "^3.6.4",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^1.19.1",
+    "vue-template-compiler": "^2.6.11"
+  }
 }
