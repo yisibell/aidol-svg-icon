@@ -1,6 +1,6 @@
 {
   "name": "@aidol/svg-icon",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "dist/aidol-svg-icon.umd.min.js",
   "description": "a svg icon component for vue",
   "author": {
