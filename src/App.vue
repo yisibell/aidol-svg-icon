@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h3>svg icon</h3>
+    <svg-icon icon-class="app" />
   </div>
 </template>
 
