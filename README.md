@@ -14,3 +14,11 @@ import SvgIcon from '@aidol/svg-icon'
 
 Vue.component('SvgIcon', SvgIcon)
 ```
+
+**demo.vue**
+
+``` vue
+<template>
+  <svg-icon icon-class="icon-name" />
+</template>
+```
