@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import { isExternal } from "../utils/validate";
-
 export default {
   name: "AiSvgIcon",
   props: {
@@ -27,7 +25,7 @@ export default {
   },
   computed: {
     isExternal() {
-      return isExternal(this.iconClass);
+      return this.isOutLinks(this.iconClass);
     },
     iconName() {
       return `#icon-${this.iconClass}`;
@@ -44,6 +42,11 @@ export default {
         mask: `url(${this.iconClass}) no-repeat 50% 50%`,
         "-webkit-mask": `url(${this.iconClass}) no-repeat 50% 50%`
       };
+    }
+  },
+  methods: {
+    isOutLinks(path) {
+      return /^(https?:|mailto:|tel:)/.test(path);
     }
   }
 };

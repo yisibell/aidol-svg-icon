@@ -1,9 +1,11 @@
-
 /test
 /demo
 /example
 /public
-/src
+
+src/App.vue
+src/main.js
+src/icons
 
 vue.config.js
 package-lock.json
