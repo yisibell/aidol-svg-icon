@@ -1,0 +1,7 @@
+.gitignore
+
+/test
+/demo
+/example
+
+package-lock.json

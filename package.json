@@ -1,0 +1,29 @@
+{
+  "name": "@aidol/svg-icon",
+  "version": "1.0.0",
+  "description": "a svg icon component for vue",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yisibell/aidol-svg-icon.git"
+  },
+  "keywords": [
+    "svg-icon",
+    "aidol",
+    "svg",
+    "vue",
+    "component"
+  ],
+  "author": {
+    "email": "yisiwings@163.com",
+    "name": "elenh"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yisibell/aidol-svg-icon/issues"
+  },
+  "homepage": "https://github.com/yisibell/aidol-svg-icon#readme"
+}
