@@ -31,16 +31,22 @@ Vue.component('SvgIcon', SvgIcon)
 
 ``` js
 // vue.config.js
+const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+
 module.exports = {
   // ...
   chainWebpack(config) {
-    // 变更 url-loader 不处理指定文件夹下作为icon使用的svg文件
+    // 变更 url-loader 不处理指定文件夹下作为 icon 使用的 svg 文件
     config.module
       .rule("svg")
       .exclude.add(resolve("src/icons"))
       .end();
 
-    // 添加 svg-sprite-loader 处理指定文件夹下的svg文件
+    // 添加 svg-sprite-loader 处理指定文件夹下的 svg 文件
     config.module
       .rule("icons")
       .test(/\.svg$/)
