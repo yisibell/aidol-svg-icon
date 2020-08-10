@@ -10,23 +10,6 @@ $ npm i @aidol/svg-icon -S
 
 # Usage
 
-``` js
-import Vue from 'vue'
-import SvgIcon from '@aidol/svg-icon'
-
-Vue.component('SvgIcon', SvgIcon)
-```
-
-**demo.vue**
-
-``` vue
-<template>
-  <svg-icon icon-class="symbolId-name" />
-</template>
-```
-
-# Tips
-
 `@aidol/svg-icon` 需要配合 `svg-sprite-loader` 使用。
 
 你首先需要对 `webpack` 进行如下配置(以 `@vue/cli` 为例):
@@ -66,7 +49,7 @@ module.exports = {
 
 然后，将你的 `.svg` 图标文件放置在 `src/icons/svg` 文件夹下。
 
-定义批量导入 `svg` 模块的入口。
+定义批量导入 `.svg` 模块的入口。
 
 ``` js
 // src/icons/index.js
@@ -84,9 +67,20 @@ requireAll(req)
 最后将这些 `.svg` 文件在项目入口文件 `main.js` 中集中导入。
 
 ``` js
-// ...
+import Vue from 'vue'
 
 import '@/icons'
 
-// ...
+new Vue({
+  // ...
+})
+```
+
+然后你就可以像这样使用：
+
+**demo.vue**
+``` vue
+<template>
+  <svg-icon icon-class="symbolId-name" />
+</template>
 ```
