@@ -1,5 +1,7 @@
 # @aidol/svg-icon
 
+`svg sprite` 图标解决方案。
+
 # Installation
 
 ``` bash
@@ -64,4 +66,27 @@ module.exports = {
 
 然后，将你的 `.svg` 图标文件放置在 `src/icons/svg` 文件夹下。
 
-最后将这些 `.svg` 文件使用 `require.context()` 在项目入口文件 `main.js` 中集中导入。
+定义批量导入 `svg` 模块的入口。
+
+``` js
+// src/icons/index.js
+
+import Vue from 'vue'
+import SvgIcon from '@aidol/svg-icon' // svg component
+
+Vue.component('svg-icon', SvgIcon) // register globally
+
+const req = require.context('./svg', false, /\.svg$/)
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+requireAll(req)
+```
+
+最后将这些 `.svg` 文件在项目入口文件 `main.js` 中集中导入。
+
+``` js
+// ...
+
+import '@/icons'
+
+// ...
+```
