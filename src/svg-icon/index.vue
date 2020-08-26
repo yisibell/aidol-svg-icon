@@ -69,10 +69,3 @@ export default {
   display: inline-block;
 }
 </style>
-
-<style>
-/* 解决图标颜色改变不成功问题 */
-#__SVG_SPRITE_NODE__ path {
-  fill: inherit !important;
-}
-</style>
