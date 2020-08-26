@@ -14,10 +14,12 @@
 export default {
   name: "AiSvgIcon",
   props: {
+    // 图标名称
     iconClass: {
       type: String,
       required: true
     },
+    // 附加类名
     className: {
       type: String,
       default: ""
@@ -65,5 +67,12 @@ export default {
   background-color: currentColor;
   mask-size: cover !important;
   display: inline-block;
+}
+</style>
+
+<style>
+/* 解决图标颜色改变不成功问题 */
+path {
+  fill: inherit !important;
 }
 </style>

@@ -2,6 +2,8 @@
   <div id="app">
     <h3>svg icon</h3>
     <svg-icon icon-class="app" />
+    <svg-icon icon-class="text-underline" />
+    <svg-icon icon-class="text-de-line-through" />
   </div>
 </template>
 
@@ -19,5 +21,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#app svg {
+  fill: red;
 }
 </style>

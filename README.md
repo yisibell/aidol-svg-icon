@@ -84,3 +84,9 @@ new Vue({
   <svg-icon icon-class="symbolId-name" />
 </template>
 ```
+
+# Logs
+
+- 2020-08-26 (version 1.1.2)
+
+1. **Upgrade** 优化图标颜色改变失败问题。
