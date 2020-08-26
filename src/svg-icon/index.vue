@@ -72,7 +72,7 @@ export default {
 
 <style>
 /* 解决图标颜色改变不成功问题 */
-path {
+#__SVG_SPRITE_NODE__ path {
   fill: inherit !important;
 }
 </style>
