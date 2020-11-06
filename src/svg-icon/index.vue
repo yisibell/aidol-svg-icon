@@ -6,7 +6,7 @@
     v-on="$listeners"
   ></div>
   <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
-    <use :xlink:href="iconName" />
+    <use :href="iconName" />
   </svg>
 </template>
 

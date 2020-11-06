@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h3>svg icon</h3>
+    <h3>@aidol/svg-icon</h3>
     <svg-icon icon-class="app" />
     <svg-icon icon-class="text-underline" />
     <svg-icon icon-class="text-de-line-through" />

@@ -8,11 +8,20 @@
 $ npm i @aidol/svg-icon -S
 ```
 
+# Perparation
+
+`@aidol/svg-icon` 需要配合 `svg-sprite-loader` 使用。所以，如果你的项目没有安装 <a href="https://github.com/JetBrains/svg-sprite-loader#readme" target="_blank"> svg-sprite-loader </a>。
+请先安装它。
+
+``` bash
+$ npm i svg-sprite-loader -D
+```
+
 # Usage
 
-`@aidol/svg-icon` 需要配合 `svg-sprite-loader` 使用。
+## 在 `@vue/cli3.x` 的项目中使用
 
-你首先需要对 `webpack` 进行如下配置(以 `@vue/cli` 为例):
+首先，你需要对 `webpack` 进行如下配置：
 
 ``` js
 // vue.config.js
@@ -76,7 +85,82 @@ new Vue({
 })
 ```
 
-然后你就可以像这样使用：
+## 在 `nuxt` 应用中使用
+
+**配置 nuxt.config.js**
+
+``` js
+// nuxt.config.js
+
+export default {
+  // ...
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, { isClient }) {
+      if (isClient) {
+        const svgRule = config.module.rules.find((rule) =>
+          rule.test.test('.svg')
+        )
+        svgRule.exclude = [resolve('assets/icons/svg')]
+
+        // Includes /assets/icons/svg for svg-sprite-loader
+        config.module.rules.push({
+          test: /\.svg$/,
+          include: [resolve('assets/icons/svg')],
+          loader: 'svg-sprite-loader',
+          options: {
+            symbolId: 'icon-[name]',
+          },
+        })
+      }
+    },
+  }
+  // ...
+}
+```
+
+**新建 svg图标存放文件夹**
+
+将你的 `*.svg` 图标文件集中放置在 `~/assets/icons/svg` 文件夹下。
+
+**定义 plugin**
+
+新建 `~/plugins/svg-icon.js` 文件，并在里面写入：
+
+``` js
+import Vue from 'vue'
+import SvgIcon from '@aidol/svg-icon' // svg component
+
+Vue.component('svg-icon', SvgIcon) // register globally
+
+const req = require.context('~/assets/icons/svg', false, /\.svg$/)
+const requireAll = (requireContext) => requireContext.keys().map(requireContext)
+requireAll(req)
+```
+
+**配置 svg-icon 插件至 nuxt.config.js**
+
+``` js
+export default {
+  // ...
+
+  plugins: [
+    // ...
+    { src: '~/plugins/svg-icon', mode: 'client' }
+  ]
+
+  // ...
+}
+```
+
+完毕。
+
+# Done
+
+最后，你就可以像这样使用 `svg icon`：
 
 **demo.vue**
 ``` vue
@@ -85,7 +169,13 @@ new Vue({
 </template>
 ```
 
+> 注：这里的 `icon-class` 就是你的那些 `svg` 图标文件名。
+
 # Logs
+
+- 2020-11-06 (version 1.2.0)
+
+1. **Upgrade** 将 `<use />` 标签的 `xlink:href` 属性改为 `href`，使其兼容 **svg 2**。
 
 - 2020-08-26 (version 1.1.4)
 
