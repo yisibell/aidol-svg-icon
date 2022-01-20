@@ -30,7 +30,8 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name aidol-svg-icon src/svg-icon/index.vue",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "release": "npm publish --access=public"
   },
   "peerDependencies": {
     "svg-sprite-loader": "^5.0.0",
