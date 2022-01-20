@@ -8,8 +8,14 @@ src/main.js
 src/icons
 
 vue.config.js
-package-lock.json
 babel.config.js
+jsconfig.json
+
 .eslintrc.js
 .browserslistrc
 .gitignore
+.czrc
+
+# lock file
+package-lock.json
+yarn.lock

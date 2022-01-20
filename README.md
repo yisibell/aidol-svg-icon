@@ -1,6 +1,6 @@
 # @aidol/svg-icon
 
-`svg sprite` 图标解决方案。
+`svg sprite icon` 图标解决方案。
 
 # Installation
 
@@ -85,7 +85,7 @@ new Vue({
 })
 ```
 
-## 在 `nuxt` 应用中使用
+## 在 `Nuxt` 应用中使用
 
 **配置 nuxt.config.js**
 
