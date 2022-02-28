@@ -3,14 +3,15 @@
 /example
 /public
 
+# source
 src/App.vue
 src/main.js
 src/icons
 
+# config file
 vue.config.js
 babel.config.js
 jsconfig.json
-
 .eslintrc.js
 .browserslistrc
 .gitignore

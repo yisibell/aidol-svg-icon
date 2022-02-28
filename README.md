@@ -5,7 +5,11 @@
 # Installation
 
 ``` bash
-$ npm i @aidol/svg-icon -S
+# yarn
+$ yarn add @aidol/svg-icon
+
+# npm
+$ npm i @aidol/svg-icon
 ```
 
 # Perparation
@@ -19,7 +23,7 @@ $ npm i svg-sprite-loader -D
 
 # Usage
 
-## 在 `@vue/cli3.x` 的项目中使用
+## 在 `@vue/cli (3 or 4.x)` 的项目中使用
 
 首先，你需要对 `webpack` 进行如下配置：
 
@@ -66,10 +70,12 @@ module.exports = {
 import Vue from 'vue'
 import SvgIcon from '@aidol/svg-icon' // svg component
 
-Vue.component('svg-icon', SvgIcon) // register globally
+// 1. register globally
+Vue.component('svg-icon', SvgIcon) 
 
+// 2. require svg files
 const req = require.context('./svg', false, /\.svg$/)
-const requireAll = requireContext => requireContext.keys().map(requireContext)
+const requireAll = requireContext => requireContext.keys().forEach(requireContext)
 requireAll(req)
 ```
 
@@ -134,10 +140,12 @@ export default {
 import Vue from 'vue'
 import SvgIcon from '@aidol/svg-icon' // svg component
 
-Vue.component('svg-icon', SvgIcon) // register globally
+// 1. register globally
+Vue.component('svg-icon', SvgIcon) 
 
+// 2. require svg files
 const req = require.context('~/assets/icons/svg', false, /\.svg$/)
-const requireAll = (requireContext) => requireContext.keys().map(requireContext)
+const requireAll = (requireContext) => requireContext.keys().forEach(requireContext)
 requireAll(req)
 ```
 
@@ -171,16 +179,6 @@ export default {
 
 > 注：这里的 `icon-class` 就是你的那些 `svg` 图标文件名。
 
-# Logs
+# Change Logs
 
-- 2020-11-06 (version 1.2.0)
-
-1. **Upgrade** 将 `<use />` 标签的 `xlink:href` 属性改为 `href`，使其兼容 **svg 2**。
-
-- 2020-08-26 (version 1.1.4)
-
-1. **BugFixs** 去除图标颜色可自定义，原因是无法兼容多色图标。
-
-- 2020-08-26 (version 1.1.3)
-
-1. **Upgrade** 优化图标颜色改变失败问题。
+<a href="https://github.com/yisibell/aidol-svg-icon/blob/master/CHANGELOG.md">更新记录</a>。
