@@ -18,6 +18,9 @@
     "webpack",
     "nuxt"
   ],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/yisibell/aidol-svg-icon.git"

@@ -29,9 +29,20 @@ $ npm i @aidol/svg-icon
 $ npm i svg-sprite-loader -D
 ```
 
+# Component properties
+
+| Prop name | Default value | Required  | Description | Type |
+| :---: | :---: | :---:| :---: | :---: |
+| `icon-class` | `undefined` | `true` |  SVG Symbol Id which is SVG filename in `@/icons` folder.  | `string` |
+| `className` | `undefined` | `false` | Add Extra class name to SVG Element | `string` |
+| `color` | `undefined` | `false` | Define SVG color | `string` |
+| `fontSize` | `undefined` | `false` | Define SVG size  | `string` |
+
 # Usage
 
-## 在 `@vue/cli (3 || 4.x || 5.x)` 的项目中使用
+## Setup
+
+### 在 `@vue/cli (3 || 4.x || 5.x)` 的项目中使用
 
 首先，你需要对 `webpack` 进行如下配置：
 
@@ -99,7 +110,7 @@ new Vue({
 })
 ```
 
-## 在 `Nuxt` 应用中使用
+### 在 `Nuxt` 应用中使用
 
 **配置 nuxt.config.js**
 
@@ -172,7 +183,7 @@ export default {
 }
 ```
 
-# Done
+### Done
 
 最后，你就可以像这样使用 `svg icon`：
 
@@ -185,16 +196,6 @@ export default {
 ```
 
 > 注：这里的 `icon-class` 就是你的那些 `svg` 图标文件名。
-
-
-# Component properties
-
-| Prop Name | Default value | Required  | Description | Type |
-| :---: | :---: | :---:| :---: | :---: |
-| `icon-class` | `undefined` | `true` |  SVG Symbol Id which is SVG filename in `@/icons` folder.  | `string` |
-| `className` | `undefined` | `false` | Extra class name for SVG Element | `string` |
-| `color` | `undefined` | `false` | Define SVG color | `string` |
-| `fontSize` | `undefined` | `false` | Define SVG size  | `string` |
 
 
 # CHANGE LOG
