@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://www.npmjs.org/package/@aidol/svg-icon">
+    <img src="https://img.shields.io/npm/v/@aidol/svg-icon.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/@aidol/svg-icon?minimal=true">
+    <img src="https://img.shields.io/npm/dm/@aidol/svg-icon.svg">
+  </a>
+  <br>
+</p>
+
+
 # @aidol/svg-icon
 
 A Vue **SVG Symbol icon** component for **svg-sprite-loader**, Easy to custom SVG icon 's `color` and `size`!!!
@@ -36,7 +47,7 @@ $ npm i @aidol/svg-icon
 
 | Prop name | Default value | Required  | Description | Type |
 | :---: | :---: | :---:| :---: | :---: |
-| `icon-class` | `undefined` | `true` |  SVG Symbol Id which is SVG filename in `@/icons` folder.  | `string` |
+| `icon-class` | `undefined` | `true` |  SVG Symbol Id which is SVG filename in the SVG folder.  | `string` |
 | `className` | `undefined` | `false` | Add Extra class name to SVG Element | `string` |
 | `color` | `undefined` | `false` | Define SVG color | `string` |
 | `fontSize` | `undefined` | `false` | Define SVG size  | `string` |
@@ -114,7 +125,7 @@ new Vue({
 
 ## In Nuxt2
 
-1. First, config the `nuxt.config.js`:
+1. First, config `webpack` in the `nuxt.config.js`:
 
 ``` js
 // nuxt.config.js
