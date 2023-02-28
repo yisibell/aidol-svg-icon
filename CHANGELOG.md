@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v2.1.2
+
+
+### 🏡 Chore
+
+  - **docs:** Update readme to en (37d6f39)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.1.1
 
 
