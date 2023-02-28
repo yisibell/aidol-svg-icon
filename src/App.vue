@@ -1,16 +1,41 @@
 <template>
   <div id="app">
-    <h3>@aidol/svg-icon</h3>
-    <svg-icon icon-class="app" />
-    <svg-icon icon-class="text-underline" />
-    <svg-icon icon-class="text-de-line-through" />
+    <h3>单色图标：</h3>
+    <svg-icon
+      icon-class="app"
+      class="test"
+      color="red"
+      font-size="36px"
+    />
+    <svg-icon
+      icon-class="dashboard"
+      class="test"
+      color="skyblue"
+      font-size="36px"
+    />
+    <svg-icon
+      icon-class="text-underline"
+      color="yellow"
+      font-size="36px"
+    />
+    <svg-icon
+      icon-class="text-de-line-through"
+      font-size="36px"
+    />
+
+    <h3>多色图标：</h3>
+
+    <svg-icon
+      icon-class="buding"
+      font-size="36px"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: "App"
-};
+  name: 'App'
+}
 </script>
 
 <style>
@@ -21,9 +46,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-#app svg {
-  fill: red;
 }
 </style>

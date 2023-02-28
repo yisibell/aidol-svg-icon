@@ -1,14 +1,14 @@
 {
   "name": "@aidol/svg-icon",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "main": "dist/aidol-svg-icon.umd.js",
-  "description": "A svg icon component for vue",
+  "description": "A vue svg symbol icon component for svg-sprite-loader.",
   "author": {
     "email": "yisiwings@163.com",
     "name": "elenh"
   },
   "keywords": [
-    "svg-sprite-icon",
+    "svg-symbol-icon",
     "vue",
     "svg",
     "icon",
@@ -29,28 +29,30 @@
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name aidol-svg-icon src/svg-icon/index.vue",
+    "build": "vue-cli-service build --target lib --name aidol-svg-icon src/components/SvgIcon/index.vue",
     "lint": "vue-cli-service lint",
-    "release": "npm publish --access=public"
+    "release": "npm run build && changelogen --release && npm publish --access=public && git push --follow-tags"
   },
   "peerDependencies": {
-    "svg-sprite-loader": "^5.0.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11 || ^3.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-eslint": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.19.1",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
+    "@vue/eslint-config-standard": "^7.0.0",
+    "changelogen": "^0.4.1",
     "core-js": "^3.6.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^6.7.2",
+    "eslint": "^8.29.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^1.19.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^8.7.1",
     "svg-sprite-loader": "^5.0.0",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "^2.7.14"
   }
 }

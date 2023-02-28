@@ -1,10 +1,13 @@
 # @aidol/svg-icon
 
-`svg sprite icon` 图标解决方案。
+A Vue SVG Symbol icon component for svg-sprite-loader.
 
 # Installation
 
 ``` bash
+# pnpm
+$ pnpm add @aidol/svg-icon
+
 # yarn
 $ yarn add @aidol/svg-icon
 
@@ -23,7 +26,7 @@ $ npm i svg-sprite-loader -D
 
 # Usage
 
-## 在 `@vue/cli (3 or 4.x)` 的项目中使用
+## 在 `@vue/cli (3 || 4.x || 5.x)` 的项目中使用
 
 首先，你需要对 `webpack` 进行如下配置：
 
@@ -171,6 +174,7 @@ export default {
 最后，你就可以像这样使用 `svg icon`：
 
 **demo.vue**
+
 ``` vue
 <template>
   <svg-icon icon-class="symbolId-name" />
@@ -179,6 +183,17 @@ export default {
 
 > 注：这里的 `icon-class` 就是你的那些 `svg` 图标文件名。
 
-# Change Logs
 
-<a href="https://github.com/yisibell/aidol-svg-icon/blob/master/CHANGELOG.md">更新记录</a>。
+# Component properties
+
+| Prop Name | Default value | Required  | Description | Type |
+| :---: | :---: | :---:| :---: | :---: |
+| `icon-class` | `undefined` | `true` |  SVG Symbol Id which is SVG filename in `@/icons` folder.  | `string` |
+| `className` | `undefined` | `false` | Extra class name for SVG Element | `string` |
+| `color` | `undefined` | `false` | Define SVG color | `string` |
+| `fontSize` | `undefined` | `false` | Define SVG size  | `string` |
+
+
+# CHANGE LOG
+
+<a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>.
