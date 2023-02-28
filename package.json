@@ -2,7 +2,7 @@
   "name": "@aidol/svg-icon",
   "version": "2.0.0",
   "main": "dist/aidol-svg-icon.umd.js",
-  "description": "A vue svg symbol icon component for svg-sprite-loader.",
+  "description": "A Vue SVG Symbol icon component for svg-sprite-loader, Easy to custom SVG icon 's color and size!!!",
   "author": {
     "email": "yisiwings@163.com",
     "name": "elenh"

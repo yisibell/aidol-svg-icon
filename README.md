@@ -1,6 +1,11 @@
 # @aidol/svg-icon
 
-A Vue SVG Symbol icon component for svg-sprite-loader.
+A Vue SVG Symbol icon component for svg-sprite-loader, Easy to custom SVG icon 's color and size!!!
+
+# Features
+
+- Ability to manipulate SVG icons. e.g. using `font-size` and `color`.
+- Support <a href="https://www.iconfont.cn/" target="_blank">Iconfont svg icons</a>.
 
 # Installation
 
@@ -166,8 +171,6 @@ export default {
   // ...
 }
 ```
-
-完毕。
 
 # Done
 
