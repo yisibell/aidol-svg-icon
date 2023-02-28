@@ -1,7 +1,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 369:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15,7 +15,28 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".svg-icon[data-v-73451ad8]{width:1em;height:1em;vertical-align:-.15em;fill:currentColor;overflow:hidden}.svg-external-icon[data-v-73451ad8]{background-color:currentColor;-webkit-mask-size:cover!important;mask-size:cover!important;display:inline-block}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".svg-icon-wrapper[data-v-5aa6fb39]{display:inline-flex;justify-content:center;align-items:center;color:var(--svg-icon-color);font-size:var(--svg-icon-font-size)}.svg-icon[data-v-5aa6fb39]{width:1em;height:1em;fill:currentColor;stroke:currentColor}.svg-external-icon[data-v-5aa6fb39]{background-color:currentColor;-webkit-mask-size:cover!important;mask-size:cover!important;display:inline-block}", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 477:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "svg#__SVG_SPRITE_NODE__ .use-current-color path{fill:currentColor!important;stroke:currentColor!important}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -126,19 +147,35 @@ module.exports = function (i) {
 
 /***/ }),
 
-/***/ 523:
+/***/ 89:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(369);
+var content = __webpack_require__(341);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(402)/* ["default"] */ .Z)
-var update = add("3d43000f", content, true, {"sourceMap":false,"shadowMode":false});
+var update = add("394bcc71", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
+/***/ 64:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(477);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = (__webpack_require__(402)/* ["default"] */ .Z)
+var update = add("82cd9d32", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -508,23 +545,27 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SvgIcon/index.vue?vue&type=template&id=73451ad8&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SvgIcon/index.vue?vue&type=template&id=5aa6fb39&scoped=true&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _vm.isExternal ? _c('div', _vm._g({
-    staticClass: "svg-external-icon svg-icon",
+    class: ['svg-external-icon', 'svg-icon', _vm.className],
     style: _vm.styleExternalIcon
-  }, _vm.$listeners)) : _c('svg', _vm._g({
-    class: _vm.svgClass,
+  }, _vm.$listeners)) : _c('span', _vm._g({
+    staticClass: "svg-icon-wrapper",
+    style: _vm.styleVars
+  }, _vm.$listeners), [_c('svg', {
+    class: ['svg-icon', _vm.className],
     attrs: {
+      "font-size": _vm.fontSize,
       "aria-hidden": "true"
     }
-  }, _vm.$listeners), [_c('use', {
+  }, [_c('use', {
     attrs: {
       "href": _vm.iconName
     }
-  })]);
+  })])]);
 };
 var staticRenderFns = [];
 
@@ -532,30 +573,35 @@ var staticRenderFns = [];
 /* harmony default export */ var SvgIconvue_type_script_lang_js_ = ({
   name: 'AiSvgIcon',
   props: {
-    // 图标名称
     iconClass: {
       type: String,
       required: true
     },
-    // 附加类名
     className: {
       type: String,
-      default: ''
+      default: undefined
+    },
+    color: {
+      type: String,
+      default: undefined
+    },
+    fontSize: {
+      type: String,
+      default: undefined
     }
   },
   computed: {
+    styleVars() {
+      return {
+        '--svg-icon-color': this.color,
+        '--svg-icon-font-size': this.fontSize
+      };
+    },
     isExternal() {
       return this.isOutLinks(this.iconClass);
     },
     iconName() {
       return `#icon-${this.iconClass}`;
-    },
-    svgClass() {
-      if (this.className) {
-        return 'svg-icon ' + this.className;
-      } else {
-        return 'svg-icon';
-      }
     },
     styleExternalIcon() {
       return {
@@ -564,17 +610,41 @@ var staticRenderFns = [];
       };
     }
   },
+  watch: {
+    color: {
+      handler() {
+        this.setSVGPathToCurrentColor();
+      }
+    }
+  },
+  mounted() {
+    this.init();
+  },
   methods: {
+    init() {
+      this.setSVGPathToCurrentColor();
+    },
     isOutLinks(path) {
       return /^(https?:|mailto:|tel:)/.test(path);
+    },
+    setSVGPathToCurrentColor() {
+      if (!this.color) return;
+      this.$nextTick(() => {
+        const targetSymbol = document.querySelector(`${this.iconName}`);
+        targetSymbol && targetSymbol.classList.add('use-current-color');
+      });
     }
   }
 });
 ;// CONCATENATED MODULE: ./src/components/SvgIcon/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_SvgIconvue_type_script_lang_js_ = (SvgIconvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SvgIcon/index.vue?vue&type=style&index=0&id=73451ad8&prod&scoped=true&lang=css&
-var SvgIconvue_type_style_index_0_id_73451ad8_prod_scoped_true_lang_css_ = __webpack_require__(523);
-;// CONCATENATED MODULE: ./src/components/SvgIcon/index.vue?vue&type=style&index=0&id=73451ad8&prod&scoped=true&lang=css&
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SvgIcon/index.vue?vue&type=style&index=0&id=5aa6fb39&prod&scoped=true&lang=css&
+var SvgIconvue_type_style_index_0_id_5aa6fb39_prod_scoped_true_lang_css_ = __webpack_require__(89);
+;// CONCATENATED MODULE: ./src/components/SvgIcon/index.vue?vue&type=style&index=0&id=5aa6fb39&prod&scoped=true&lang=css&
+
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/SvgIcon/index.vue?vue&type=style&index=1&id=5aa6fb39&prod&lang=css&
+var SvgIconvue_type_style_index_1_id_5aa6fb39_prod_lang_css_ = __webpack_require__(64);
+;// CONCATENATED MODULE: ./src/components/SvgIcon/index.vue?vue&type=style&index=1&id=5aa6fb39&prod&lang=css&
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -681,6 +751,7 @@ function normalizeComponent(
 ;
 
 
+
 /* normalize component */
 
 var component = normalizeComponent(
@@ -689,7 +760,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "73451ad8",
+  "5aa6fb39",
   null
   
 )

@@ -15,3 +15,23 @@
 - 2020-08-26 (version 1.1.3)
 
 1. **Upgrade** 优化图标颜色改变失败问题。
+## v2.1.0
+
+
+### 🚀 Enhancements
+
+  - Upgrade vue cli to v5 and support custom svg color and size (71b143b)
+
+### 📖 Documentation
+
+  - Update docs (ba3b444)
+
+### 🏡 Chore
+
+  - **docs:** Update readme (69769b5)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+- Elenh ([@yisibell](http://github.com/yisibell))
+
