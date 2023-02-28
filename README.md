@@ -1,6 +1,8 @@
 # @aidol/svg-icon
 
-A Vue SVG Symbol icon component for svg-sprite-loader, Easy to custom SVG icon 's color and size!!!
+A Vue **SVG Symbol icon** component for **svg-sprite-loader**, Easy to custom SVG icon 's `color` and `size`!!!
+
+> TIPS:  `@aidol/svg-icon` needs to be used in conjunction with `svg-sprite-loader` . So, please pre-install <a href="https://github.com/JetBrains/svg-sprite-loader" target="_blank"> svg-sprite-loader </a> and config it.
 
 # Features
 
@@ -20,16 +22,17 @@ $ yarn add @aidol/svg-icon
 $ npm i @aidol/svg-icon
 ```
 
-# Perparation
+# Usage
 
-`@aidol/svg-icon` 需要配合 `svg-sprite-loader` 使用。所以，如果你的项目没有安装 <a href="https://github.com/JetBrains/svg-sprite-loader#readme" target="_blank"> svg-sprite-loader </a>。
-请先安装它。
+**demo.vue**
 
-``` bash
-$ npm i svg-sprite-loader -D
+``` vue
+<template>
+  <svg-icon icon-class="svg-symbol-id" font-size="36px" color="red" />
+</template>
 ```
 
-# Component properties
+# Properties
 
 | Prop name | Default value | Required  | Description | Type |
 | :---: | :---: | :---:| :---: | :---: |
@@ -38,13 +41,11 @@ $ npm i svg-sprite-loader -D
 | `color` | `undefined` | `false` | Define SVG color | `string` |
 | `fontSize` | `undefined` | `false` | Define SVG size  | `string` |
 
-# Usage
+# How to config **svg-sprite-loader** ?
 
-## Setup
+## In `Vue CLI`
 
-### 在 `@vue/cli (3 || 4.x || 5.x)` 的项目中使用
-
-首先，你需要对 `webpack` 进行如下配置：
+1. First, you need config `webpack` with `chainWebpack`:
 
 ``` js
 // vue.config.js
@@ -57,13 +58,14 @@ function resolve(dir) {
 module.exports = {
   // ...
   chainWebpack(config) {
-    // 变更 url-loader 不处理指定文件夹下作为 icon 使用的 svg 文件
+    
+    // Change the configuration of url-loader so that it does not process svg files used as icons in the specified folder
     config.module
       .rule("svg")
       .exclude.add(resolve("src/icons"))
       .end();
 
-    // 添加 svg-sprite-loader 处理指定文件夹下的 svg 文件
+    // Add svg-sprite-loader to process svg files in the specified folder
     config.module
       .rule("icons")
       .test(/\.svg$/)
@@ -79,9 +81,9 @@ module.exports = {
 }
 ```
 
-然后，将你的 `.svg` 图标文件放置在 `src/icons/svg` 文件夹下。
+2. Then, place your `.svg` icon files in the `src/icons/svg` folder.
 
-定义批量导入 `.svg` 模块的入口。
+3. Defines the **entry point** for batch importing `.svg` modules:
 
 ``` js
 // src/icons/index.js
@@ -98,7 +100,7 @@ const requireAll = requireContext => requireContext.keys().forEach(requireContex
 requireAll(req)
 ```
 
-最后将这些 `.svg` 文件在项目入口文件 `main.js` 中集中导入。
+4. Finally, these `.svg` files are centrally imported in the project entry file `main.js`.
 
 ``` js
 import Vue from 'vue'
@@ -110,9 +112,9 @@ new Vue({
 })
 ```
 
-### 在 `Nuxt` 应用中使用
+## In Nuxt2
 
-**配置 nuxt.config.js**
+1. First, config the `nuxt.config.js`:
 
 ``` js
 // nuxt.config.js
@@ -147,13 +149,9 @@ export default {
 }
 ```
 
-**新建 svg图标存放文件夹**
+2. Centralize your `*.svg` icon files in the `~/assets/icons/svg` folder.
 
-将你的 `*.svg` 图标文件集中放置在 `~/assets/icons/svg` 文件夹下。
-
-**定义 plugin**
-
-新建 `~/plugins/svg-icon.js` 文件，并在里面写入：
+3. Create a new `~/plugins/svg-icon.js` file and write in it:
 
 ``` js
 import Vue from 'vue'
@@ -168,7 +166,7 @@ const requireAll = (requireContext) => requireContext.keys().forEach(requireCont
 requireAll(req)
 ```
 
-**配置 svg-icon 插件至 nuxt.config.js**
+4. Configure the **svg-icon** plugin to `nuxt.config.js`:
 
 ``` js
 export default {
@@ -182,21 +180,6 @@ export default {
   // ...
 }
 ```
-
-### Done
-
-最后，你就可以像这样使用 `svg icon`：
-
-**demo.vue**
-
-``` vue
-<template>
-  <svg-icon icon-class="symbolId-name" />
-</template>
-```
-
-> 注：这里的 `icon-class` 就是你的那些 `svg` 图标文件名。
-
 
 # CHANGE LOG
 
