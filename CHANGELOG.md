@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v2.1.1
+
+
+### 🏡 Chore
+
+  - **docs:** Update readme (271beb1)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.1.0
 ### 🚀 Enhancements
 
