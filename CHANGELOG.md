@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v2.1.4
+
+
+### 🏡 Chore
+
+  - **docs:** Warning tips (1718e50)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.1.3
 
 
