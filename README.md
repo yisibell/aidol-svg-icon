@@ -9,6 +9,8 @@
 </p>
 
 
+> WARNING: This Package is no longer maintained, Please use <a href="https://github.com/yisibell/vue-symbol-icon" target="_blank">vue-symbol-icon</a> instead.
+
 # @aidol/svg-icon
 
 A Vue **SVG Symbol icon** component for **svg-sprite-loader**, Easy to custom SVG icon 's `color` and `size`!!!
